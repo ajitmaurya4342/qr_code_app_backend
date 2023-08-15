@@ -83,35 +83,61 @@ module.exports.getUserList = async function (req, res, next) {
 
   let defaultFieldsArray = [
     {
-      name: "Profile",
-      inputType: "file",
+      label: "Full Name",
+      inputType: "text",
       vModelValue: "",
-      key: "profile",
     },
     {
-      name: "Date of Birth",
+      label: "Photo",
+      inputType: "quill",
+      vModelValue: "",
+    },
+    {
+      label: "Date of Birth",
       inputType: "date",
       vModelValue: "",
-      key: "dob",
     },
     {
-      name: "Gender",
+      label: "Gender",
       inputType: "select",
       selectOptions: ["Male", "Female"],
       vModelValue: "",
-      key: "gender",
     },
     {
-      name: "Medical Details",
-      inputType: "quill",
+      label: "Mobile No.",
+      inputType: "text",
       vModelValue: "",
-      key: "medical_details",
     },
     {
-      name: "Contact Details",
+      label: "Address",
       inputType: "quill",
       vModelValue: "",
-      key: "contact_details",
+    },
+    {
+      label: "Height",
+      inputType: "text",
+      vModelValue: "",
+    },
+    {
+      label: "Weight",
+      inputType: "text",
+      vModelValue: "",
+    },
+    {
+      label: "Blood Group",
+      inputType: "text",
+      vModelValue: "",
+    },
+
+    {
+      label: "Medical Details",
+      inputType: "quill",
+      vModelValue: "",
+    },
+    {
+      label: "Contact Details",
+      inputType: "quill",
+      vModelValue: "",
     },
   ];
 
