@@ -9,6 +9,10 @@ exports.up = async function (knex) {
     table.integer("updated_by").defaultTo();
     table.datetime("updated_at").defaultTo();
   });
+
+  await knex.raw(
+    `ALTER TABLE qr_code_users CHANGE all_data all_data LONGTEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL`
+  );
 };
 
 exports.down = async function (knex) {

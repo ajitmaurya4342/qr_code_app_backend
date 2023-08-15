@@ -11,7 +11,7 @@ exports.up = async function (knex) {
 
   await knex("users").insert([
     {
-      username: "admin@123",
+      username: "admin@gmail.com",
       password: "admin@123",
     },
   ]);
