@@ -89,7 +89,7 @@ module.exports.getUserList = async function (req, res, next) {
     },
     {
       label: "Photo",
-      inputType: "quill",
+      inputType: "file",
       vModelValue: "",
     },
     {
