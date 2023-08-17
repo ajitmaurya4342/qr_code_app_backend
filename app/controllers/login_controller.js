@@ -71,6 +71,9 @@ module.exports.getUserList = async function (req, res, next) {
       if (qr_user_id) {
         builder.where("unique_code_generate", "=", qr_user_id);
       }
+      if (req.query.search) {
+        builder.whereRaw(` all_data like '%${req.query.search}%'`);
+      }
     })
     .orderBy("q_user_id", "desc")
     .paginate(pagination(limit, currentPage));
@@ -89,7 +92,7 @@ module.exports.getUserList = async function (req, res, next) {
     },
     {
       label: "Photo",
-      inputType: "file",
+      inputType: "quill",
       vModelValue: "",
     },
     {
