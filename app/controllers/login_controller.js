@@ -155,11 +155,43 @@ module.exports.getUserList = async function (req, res, next) {
     },
   ];
 
+  let errorCheckKeyValidation = [
+    {
+      key: "name",
+      errorMessage: "Please fill the name",
+    },
+    {
+      key: "dob",
+      errorMessage: "Please select date of birth",
+    },
+    {
+      key: "gender",
+      errorMessage: "Please select gende",
+    },
+    {
+      key: "mobile",
+      errorMessage: "Please select mobile number",
+    },
+    {
+      key: "height",
+      errorMessage: "Please fill the height",
+    },
+    {
+      key: "weight",
+      errorMessage: "Please fill the weight",
+    },
+    {
+      key: "blood",
+      errorMessage: "Please fill the blood group",
+    },
+  ];
+
   return res.send({
     message: "User List",
     status: true,
     Records: checkUserExist,
     defaultFieldsArray,
+    errorCheckKeyValidation,
   });
 };
 module.exports.addEditUsers = async function (req, res, next) {
