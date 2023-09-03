@@ -9,12 +9,6 @@ var storage = multer.diskStorage({
     }
     cb(null, path.normalize(__base + "/public/uploads"));
   },
-  // filename: function (req, file, cb) {
-  // 	console.log('file.fieldname :', file);
-
-  // 	cb(null, Date.now() + '-' + file.originalname)
-  // 	// cb(null, file.fieldname + '-' + Date.now())
-  // }
 });
 
 module.exports.uploadSingleFile = multer({
@@ -27,7 +21,6 @@ module.exports.uploadSingleFile = multer({
     callback(null, true);
   },
 }).single("file");
-
 
 module.exports.uploadImage = multer({
   storage: storage,
