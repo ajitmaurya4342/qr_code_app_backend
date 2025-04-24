@@ -148,6 +148,12 @@ module.exports.getUserList = async function (req, res, next) {
       vModelValue: "",
     },
     {
+      label: "Documents Upload",
+      key: "document",
+      inputType: "file",
+      vModelValue: "",
+    },
+    {
       label: "Contact Details",
       key: "contactD",
       inputType: "quill",
